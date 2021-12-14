@@ -9,7 +9,7 @@ use SMSGatewayMe\Client\Model\SendMessageRequest;
 
 // Configure client
 $config = Configuration::getDefaultConfiguration();
-$config->setApiKey('Authorization', 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJhZG1pbiIsImlhdCI6MTYzODM0MzMwOCwiZXhwIjo0MTAyNDQ0ODAwLCJ1aWQiOjkxNjM5LCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.ooC-RR3oKDcY-Si55sXbCHN0gZTgq44mMdpHC3YuzS0');
+$config->setApiKey('Authorization', 'eyJpc3MiOiJhZG1pbiIsImlhdCI6MTYzODM0MzMwOCwiZXhwIjo0MTAyNDQ0ODAwLCJ1aWQiOjkxNjM5LCJyb2xlcyI6WyJST0xFX1VTRVIiXX0.ooC-RR3oKDcY-Si55sXbCHN0gZTgq44mMdpHC3YuzS0');
 $apiClient = new ApiClient($config);
 $messageClient = new MessageApi($apiClient);
 
@@ -18,7 +18,7 @@ if (isset($_POST["number"]) && isset($_POST["msg"])) {
     $sendMessageRequest1 = new SendMessageRequest([
         'phoneNumber' => $_POST["number"],
         'message' => $_POST["msg"],
-        'deviceId' => 126407
+        'deviceId' => 1111
     ]);
     $sendMessages = $messageClient->sendMessages([
         $sendMessageRequest1
